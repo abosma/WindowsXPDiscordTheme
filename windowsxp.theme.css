@@ -1,0 +1,571 @@
+//META{"name":"Windows XP Theme","description":"Changes Discord to a Windows XP/MSN Messenger Theme, has light and dark mode version.","author":"AtillaBosma","version":"1.0"}*//
+
+@keyframes pulse {
+    0% 
+    {
+		transform: scale(0.9);
+	}
+
+    20% 
+    {
+		transform: scale(1.02);
+    }
+    
+    25%
+    {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulseSmall {
+    0% 
+    {
+		transform: scale(0.6);
+	}
+
+    20% 
+    {
+		transform: scale(0.72);
+    }
+    
+    25%
+    {
+        transform: scale(0.7);
+    }
+}
+
+@font-face {
+    font-family: MicrosoftSansSerif;
+    src: url(https://github.com/abosma/abosma.github.io/blob/master/micross.ttf);
+}
+
+.theme-dark
+{
+    --avatar-border-color-1: #65727c;
+    --avatar-border-color-2: #4b5767;
+    --avatar-border-color-3: #334151;
+    --avatar-border-outline-color: #1f2739;
+    
+    --grey-border-1: #67737b;
+
+    --light-blue-1: #353f4d;
+    --light-blue-2: #b7e8fe;
+
+    --messages-background-color: #454f59;
+
+    --member-hover-color-1: #dcf1fd;
+    --member-hover-color-2: #f5fbfe;
+
+    --scrollbar-thumb-color: #e6e9f8;
+    --scrollbar-thumb-border: #6772a0;
+
+    --scrollbar-background-border: #dbdfeb;
+    --scrollbar-background-color-1: #dbdfeb;
+    --scrollbar-background-color-2: #eff6fe;
+
+    --text-color-dark: #c3c8ce;
+    --text-color-darker: white;
+
+    --header-background-color-1: #1f2739;
+    --header-background-color-2: #334151;
+    --header-background-color-3: #4b5767;
+    --header-background-color-4: #65727c;
+
+    --windows-xp-color-1: #013b6b;
+    --windows-xp-color-2: #337bb3;
+    --windows-xp-border-bottom: #042e57;
+    --windows-xp-border-top: #3881b9;
+
+    --new-messages-background-color: #40403f;
+
+    --server-list-background-color: #5a606f;
+    --server-list-border-right-color: #161d2d;
+    --server-list-inset-color: #919195;
+    --server-list-border-top-color: rgba(0,0,0,0);
+
+    --image-close-button: url(https://i.imgur.com/TMVNXjy.png);
+    --image-maximize-button: url(https://i.imgur.com/4e6K9UM.png);
+    --image-minimize-button: url(https://i.imgur.com/eU0fTpd.png);
+    --image-bell-button: url(https://i.imgur.com/TCoTMrQ.gif);
+    --image-bell-muted-button: url(https://i.imgur.com/zFclc5C.png);
+    --image-pin-button: url(https://i.imgur.com/lGlOrAs.gif);
+    --image-help-button: url(https://i.imgur.com/yaIIa8b.png);
+    --image-mention-button: url(https://i.imgur.com/ui2btvn.png);
+}
+
+.theme-light
+{
+    --avatar-border-color-1: #e7f0f3;
+    --avatar-border-color-2: #a0b4be;
+    --avatar-border-color-3: #bdd4e0;
+    --avatar-border-outline-color: #758494;
+    
+    --grey-border-1: #ccdfe8;
+
+    --light-blue-1: #edf8f9;
+    --light-blue-2: #b7e8fe;
+
+    --messages-background-color: #ffffff;
+
+    --member-hover-color-1: #dcf1fd;
+    --member-hover-color-2: #f5fbfe;
+
+    --scrollbar-thumb-color: #e6e9f8;
+    --scrollbar-thumb-border: #6772a0;
+
+    --scrollbar-background-border: #dbdfeb;
+    --scrollbar-background-color-1: #dbdfeb;
+    --scrollbar-background-color-2: #eff6fe;
+
+    --text-color-dark: #535d68;
+    --text-color-darker: black;
+
+    --header-background-color-1: #f5fcf9;
+    --header-background-color-2: #b7e3f3;
+    --header-background-color-3: #c9f1fa;
+    --header-background-color-4: #efffff;
+
+    --windows-xp-color-1: #4792ef;
+    --windows-xp-color-2: #1261c6;
+    --windows-xp-border-bottom: #0019cf;
+    --windows-xp-border-top: #3994ff;
+
+    --new-messages-background-color: #ece9d8;
+
+    --server-list-background-color: #d3e5fa;
+    --server-list-border-right-color: #2b6dd1;
+    --server-list-inset-color: #a6c2e6;
+    --server-list-border-top-color: #f88a24;
+
+    --image-close-button: url(https://imgur.com/TlZl24o.png);
+    --image-maximize-button: url(https://i.imgur.com/jMFsOum.png);
+    --image-minimize-button: url(https://i.imgur.com/auz2QRh.png);
+    --image-bell-button: url(https://i.imgur.com/TCoTMrQ.gif);
+    --image-bell-muted-button: url(https://i.imgur.com/zFclc5C.png);
+    --image-pin-button: url(https://i.imgur.com/lGlOrAs.gif);
+    --image-help-button: url(https://i.imgur.com/yaIIa8b.png);
+    --image-mention-button: url(https://i.imgur.com/ui2btvn.png);
+}
+
+
+/* Message and member list avatar border and shadow */
+.da-avatar .da-wrapper
+{
+    border: 5px solid;
+
+    border-image-source: linear-gradient(180deg, 
+    var(--avatar-border-color-1) 0%, 
+    var(--avatar-border-color-2) 35%, 
+    var(--avatar-border-color-3) 100%);
+
+    border-image-slice: 1;
+    outline: 1px solid var(--avatar-border-outline-color);
+    filter: drop-shadow(2px 2px 4px black);
+}
+
+/* Message and member list avatar remove circle mask to make images square */
+.da-avatar .da-wrapper foreignObject
+{
+    mask: none !important;
+}
+
+/* Message input background, memberlist and channel sidebar background colour change */
+.da-sidebar .da-scroller, .da-chatContent, .da-members
+{
+    background-color: var(--light-blue-1);
+    border-right: 1px solid var(--grey-border-1);
+}
+
+/* Member list hover border addition */
+.da-member:hover
+{
+    background: linear-gradient(0deg, var(--member-hover-color-1) 0%, var(--member-hover-color-2) 100%);
+    border: 2px solid var(--light-blue-2);
+}
+
+/* Scrollbar colour change */
+::-webkit-scrollbar-thumb
+{
+    background: var(--scrollbar-thumb-color) !important;
+    border: 2px solid var(--scrollbar-thumb-border) !important;
+    border-radius: 2px !important;
+}
+
+/* Scrollbar background colour change */
+.da-messagesWrapper .da-scroller::-webkit-scrollbar-track-piece 
+{
+    border: 1px solid var(--scrollbar-background-border) !important;
+    border-radius: 0 !important;
+	background: linear-gradient(90deg, var(--scrollbar-background-color-1) 0%, var(--scrollbar-background-color-2) 100%) !important;
+}
+
+/* Message content background and message input background coiour change and border addition */
+.da-messagesWrapper .da-systemPad, .da-webkit
+{
+    background: var(--messages-background-color);
+    border: 1px solid;
+    border-color: var(--grey-border-1);
+    border-radius: 5px;
+}
+
+/* Various text colour changes (Like server title, channel title, message text etc) */
+.da-name, .da-base, .da-button, .da-iconWrapper, .da-markup
+{
+    color: var(--text-color-dark);
+}
+
+/* Header containing title etc colour change and shadow addition */
+.container-1r6BKw.themed-ANHk51, .da-header
+{
+    box-shadow: 1px 2px 10px var(--grey-border-1);
+    background: linear-gradient(0deg, 
+    var(--header-background-color-1) 0%, 
+    var(--header-background-color-2) 50%, 
+    var(--header-background-color-3) 51%, 
+    var(--header-background-color-4) 100%);
+}
+
+/* Small header colour fix */
+.da-children:after
+{
+    opacity: 0;
+}
+
+/* Emoji button image change */
+.da-contents .da-sprite
+{
+    background: url(https://i.imgur.com/oPcND33.png);
+    background-position: 0px !important;
+    background-size: 100% !important;
+}
+
+/* Fix messages being too far left after image border change */
+.contentCozy-3XX413
+{
+    padding-left: 10px;
+}
+
+/* Remove sserver banner */
+.da-scrollerFade > div > div:nth-child(1)
+{
+    display: none;
+}
+
+/* Gif button image change */
+svg[name="InvertedGIFLabel"]
+{
+    background: url(https://i.imgur.com/aSsTffg.gif);
+    background-position: 0px !important;
+    background-size: 100% !important;
+    filter: grayscale(100%);
+    transform: scale(0.9);
+}
+
+svg[name="InvertedGIFLabel"]:hover
+{
+    filter: grayscale(0%);
+    animation: pulse 1s;
+    transform: scale(1);
+}
+
+svg[name="InvertedGIFLabel"] path
+{
+    opacity: 0;
+}
+
+/* Member list image change */
+svg[name="Nova_People"]
+{
+    background: url(https://i.ibb.co/KjJLs0y/kisspng-windows-live-messenger-msn-instant-messaging-micro-viber-5ad1f81fd87693-0461334215237099838866.png);
+    background-position: 0px !important;
+    background-size: 100%;
+}
+
+svg[name="Nova_People"] path
+{
+    opacity: 0;
+}
+
+/* Pin list image change */
+svg[name="Nova_Pin"]
+{
+    background: var(--image-pin-button);
+    background-position: 0px !important;
+    background-size: 100%;
+}
+
+svg[name="Nova_Pin"] path
+{
+    opacity: 0;
+}
+
+/* Mute channel button image change */
+svg[name="Nova_Bell"]
+{
+    background: var(--image-bell-button);
+    background-position: 0px !important;
+    background-size: 100%;
+}
+
+svg[name="Nova_Bell"] path
+{
+    opacity: 0;
+}
+
+/* Mute channel button image change  */
+svg[name="Nova_BellOff"]
+{
+    background: var(--image-bell-muted-button);
+    background-position: 0px !important;
+    background-size: 100%;
+}
+
+svg[name="Nova_BellOff"] path
+{
+    opacity: 0;
+}
+
+/* At button image change  */
+svg[name="Nova_At"]
+{
+    background: var(--image-mention-button);
+    background-position: 0px !important;
+    background-size: 100%;
+}
+
+svg[name="Nova_At"] path
+{
+    opacity: 0;
+}
+
+/* Help button image change  */
+svg[name="Nova_Help"]
+{
+    background: var(--image-help-button);
+    background-position: 0px !important;
+    background-size: 100%;
+}
+
+svg[name="Nova_Help"] path
+{
+    opacity: 0;
+}
+
+/* Nitro gift button image change */
+svg[name="Gift"]
+{
+    background: url(https://i.imgur.com/eI8zWkc.png);
+    background-position: 0px !important;
+    background-size: 100%;
+    filter: grayscale(100%);
+    transform: scale(0.9);
+}
+
+svg[name="Gift"]:hover
+{
+    filter: grayscale(0%);
+    animation: pulse 1s;
+    transform: scale(1);
+}
+
+svg[name="Gift"] path
+{
+    opacity: 0;
+}
+
+/* File attach button image change */
+.da-attachButton
+{
+    background: url(https://i.imgur.com/1FO2Qwb.png);
+    background-position: 0px !important;
+    background-size: 100%;
+    filter: grayscale(100%);
+    transform: scale(0.6);
+}
+
+.da-attachButton:hover
+{
+    filter: grayscale(0%);
+    animation: pulseSmall 1s;
+    transform: scale(0.7);
+}
+
+.da-attachButtonInner
+{
+    opacity: 0;
+}
+
+/* Title bar colour change */
+.da-titleBar
+{
+    background: linear-gradient(0deg, 
+    var(--windows-xp-color-1) 0%,
+    var(--windows-xp-color-2) 100%);
+    margin-top: auto;
+    height: 3%;
+    border-bottom: 1px solid var(--windows-xp-border-bottom);
+    border-top: 1px solid var(--windows-xp-border-top);
+}
+
+/* Close button to XP close button change */
+.da-winButtonClose
+{
+    background-image: var(--image-close-button) !important;
+    background-position: 3px !important;
+    background-size: 80% !important;
+    background-repeat: no-repeat;
+    height: 30px;
+    margin-top: 1px;
+}
+
+.da-winButtonClose:hover
+{
+    background: none;
+    background-repeat: no-repeat;
+    filter: contrast(1.2);
+}
+
+.da-winButtonClose:active
+{
+    background: none;
+    background-repeat: no-repeat;
+    filter: contrast(0.8);
+}
+
+svg[name="TitleBarClose"]
+{
+    opacity: 0;
+}
+
+/* Maximize button to XP maximize button change */
+svg[name="TitleBarMaximize"]
+{
+    background-image: var(--image-maximize-button) !important;
+    background-position: 3px !important;
+    background-size: 80% !important;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 30px;
+    margin-top: 1px;
+}
+
+svg[name="TitleBarMaximize"]:hover
+{
+    background: none;
+    background-repeat: no-repeat;
+    filter: contrast(1.2);
+}
+
+svg[name="TitleBarMaximize"]:active
+{
+    background: none;
+    background-repeat: no-repeat;
+    filter: contrast(0.8);
+}
+
+svg[name="TitleBarMaximize"] rect
+{
+    opacity: 0;
+}
+
+/* Minimize button to XP minimize button change */
+svg[name="TitleBarMinimize"]
+{
+    background-image: var(--image-minimize-button) !important;
+    background-position: 3px !important;
+    background-size: 80% !important;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 30px;
+    margin-top: 1px;
+}
+
+svg[name="TitleBarMinimize"]:hover
+{
+    background: none;
+    background-repeat: no-repeat;
+    filter: contrast(1.2);
+}
+
+svg[name="TitleBarMinimize"]:active
+{
+    background: none;
+    background-repeat: no-repeat;
+    filter: contrast(0.8);
+}
+
+svg[name="TitleBarMinimize"] rect
+{
+    opacity: 0;
+}
+
+/* Fix min/max buttons being too small */
+.da-winButtonMinMax
+{
+    height: 30px;
+}
+
+/* Change Discord text on title bar at left side */
+.da-wordmark
+{
+    width: 100px;
+}
+
+svg[name="DiscordWordmark"]
+{
+    background-image: url(https://i.imgur.com/IdMZMcf.png) !important;
+    background-size: 100% !important;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 80px;
+    margin-top: -1px !important;
+}
+
+svg[name="DiscordWordmark"] path
+{
+    opacity: 0;
+}
+
+/* Bottom left voice control background colour change */
+.da-panels
+{
+    background: linear-gradient(0deg, 
+    var(--windows-xp-color-1) 0%, 
+    var(--windows-xp-color-2) 100%);
+    border-bottom: 1px solid var(--windows-xp-border-bottom);
+    border-top: 1px solid var(--windows-xp-border-top);
+    border-right: 1px solid var(--windows-xp-border-top);
+    border-radius: 2px;
+}
+
+/* Server list background colour change */
+.da-wrapper .da-scroller
+{
+    background: var(--server-list-background-color);
+    border-right: 20px inset var(--server-list-border-right-color);
+    box-shadow: inset -2px 0px var(--server-list-inset-color);
+    border-top: 1px solid var(--server-list-border-top-color);
+}
+
+/* Font change to microsoft sans serif (Like MSN) */
+.markupRtl-3M0hmN, .da-name, .da-textArea
+{
+    font-family: MicrosoftSansSerif;
+    text-shadow: 1px 1px black;
+}
+
+/* New messages button background change */
+.da-newMessagesBar
+{
+    border-radius: 0 !important;
+    border: solid 1px var(--grey-border-1) !important;
+    background: var(--new-messages-background-color) !important;
+}
+
+/* New messages button text, bottom left username colour change */
+.da-newMessagesBar span, .da-barButtonBase, .da-subtext, .da-grow, .da-title
+{
+    font-family: MicrosoftSansSerif;
+    color: var(--text-color-darker);
+    text-shadow: 1px 1px black;
+}
