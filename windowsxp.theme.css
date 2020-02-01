@@ -153,7 +153,8 @@
 
 
 /* Message and member list avatar border and shadow */
-.da-avatar .da-wrapper
+.da-avatar .da-wrapper, 
+.avatar-17mtNa, .avatar-3uk_u9 .wrapper-3t9DeA
 {
     border: 5px solid;
 
@@ -168,20 +169,23 @@
 }
 
 /* Message and member list avatar remove circle mask to make images square */
-.da-avatar .da-wrapper foreignObject
+.da-avatar .da-wrapper foreignObject, 
+.avatar-17mtNa foreignObject, .avatar-3uk_u9 foreignObject
 {
     mask: none !important;
 }
 
 /* Message input background, memberlist and channel sidebar background colour change */
-.da-sidebar .da-scroller, .da-chatContent, .da-members
+.da-sidebar .da-scroller, .da-chatContent, .da-members, 
+.scrollerWrap-2lJEkd, .chatContent-a9vAAp, .members-1998pB
 {
     background-color: var(--light-blue-1);
     border-right: 1px solid var(--grey-border-1);
 }
 
 /* Member list hover border addition */
-.da-member:hover
+.da-member:hover, 
+.member-3-YXUe:hover
 {
     background: linear-gradient(0deg, var(--member-hover-color-1) 0%, var(--member-hover-color-2) 100%);
     border: 2px solid var(--light-blue-2);
@@ -196,7 +200,8 @@
 }
 
 /* Scrollbar background colour change */
-.da-messagesWrapper .da-scroller::-webkit-scrollbar-track-piece 
+.da-messagesWrapper .da-scroller::-webkit-scrollbar-track-piece, 
+.messagesWrapper-3lZDfY .scroller-2FKFPG::-webkit-scrollbar-track-piece
 {
     border: 1px solid var(--scrollbar-background-border) !important;
     border-radius: 0 !important;
@@ -204,7 +209,8 @@
 }
 
 /* Message content background and message input background coiour change and border addition */
-.da-messagesWrapper .da-systemPad, .da-webkit
+.da-messagesWrapper .da-systemPad, .da-webkit, 
+.messagesWrapper-3lZDfY .systemPad-3UxEGl, .webkit-HjD9Er
 {
     background: var(--messages-background-color);
     border: 1px solid;
@@ -213,13 +219,14 @@
 }
 
 /* Various text colour changes (Like server title, channel title, message text etc) */
-.da-name, .da-base, .da-button, .da-iconWrapper, .da-markup
+.da-name, .da-base, .da-button, .da-iconWrapper, .da-markup, 
+.name-3YKhmS, .base-3dtUhz, .button-1w5pas, .iconWrapper-2OrFZ1, .markup-2BOw-j
 {
     color: var(--text-color-dark);
 }
 
 /* Header containing title etc colour change and shadow addition */
-.container-1r6BKw.themed-ANHk51, .da-header
+.da-header, .container-1r6BKw.themed-ANHk51, .header-2o-2hj
 {
     box-shadow: 1px 2px 10px var(--grey-border-1);
     background: linear-gradient(0deg, 
@@ -230,13 +237,13 @@
 }
 
 /* Small header colour fix */
-.da-children:after
+.da-children:after, .children-19S4PO:after
 {
     opacity: 0;
 }
 
 /* Emoji button image change */
-.da-contents .da-sprite
+.da-contents .da-sprite, .sprite-2iCowe
 {
     background: url(https://i.imgur.com/oPcND33.png);
     background-position: 0px !important;
@@ -250,7 +257,7 @@
 }
 
 /* Remove sserver banner */
-.da-scrollerFade > div > div:nth-child(1)
+.da-scrollerFade > div > div:nth-child(1), .scrollerFade-1Ijw5y > div > div:nth-child(1)
 {
     display: none;
 }
@@ -378,7 +385,7 @@ svg[name="Gift"] path
 }
 
 /* File attach button image change */
-.da-attachButton
+.da-attachButton, .attachWrapper-2TRKBi
 {
     background: url(https://i.imgur.com/1FO2Qwb.png);
     background-position: 0px !important;
@@ -387,20 +394,20 @@ svg[name="Gift"] path
     transform: scale(0.6);
 }
 
-.da-attachButton:hover
+.da-attachButton:hover, .attachWrapper-2TRKBi:hover
 {
     filter: grayscale(0%);
     animation: pulseSmall 1s;
     transform: scale(0.7);
 }
 
-.da-attachButtonInner
+.da-attachButtonInner, .attachButtonPlus-jWVFah
 {
     opacity: 0;
 }
 
 /* Title bar colour change */
-.da-titleBar
+.da-titleBar, .titleBar-AC4pGV, .headerTop-3C2Zn0
 {
     background: linear-gradient(0deg, 
     var(--windows-xp-color-1) 0%,
@@ -412,24 +419,24 @@ svg[name="Gift"] path
 }
 
 /* Close button to XP close button change */
-.da-winButtonClose
+.da-winButtonClose, .winButtonClose-1HsbF-
 {
     background-image: var(--image-close-button) !important;
     background-position: 3px !important;
     background-size: 80% !important;
     background-repeat: no-repeat;
     height: 30px;
-    margin-top: 1px;
+    margin-top: 2px;
 }
 
-.da-winButtonClose:hover
+.da-winButtonClose:hover, .winButtonClose-1HsbF-:hover
 {
     background: none;
     background-repeat: no-repeat;
     filter: contrast(1.2);
 }
 
-.da-winButtonClose:active
+.da-winButtonClose:active, .winButtonClose-1HsbF-:active
 {
     background: none;
     background-repeat: no-repeat;
@@ -442,7 +449,7 @@ svg[name="TitleBarClose"]
 }
 
 /* Maximize button to XP maximize button change */
-svg[name="TitleBarMaximize"]
+svg[name="TitleBarMaximize"], .winButtonMinMax-PBQ2gm
 {
     background-image: var(--image-maximize-button) !important;
     background-position: 3px !important;
@@ -510,7 +517,7 @@ svg[name="TitleBarMinimize"] rect
 }
 
 /* Change Discord text on title bar at left side */
-.da-wordmark
+.da-wordmark, .wordmarkWindows-1v0lYD
 {
     width: 100px;
 }
@@ -531,7 +538,7 @@ svg[name="DiscordWordmark"] path
 }
 
 /* Bottom left voice control background colour change */
-.da-panels
+.da-panels, .panels-j1Uci_
 {
     background: linear-gradient(0deg, 
     var(--windows-xp-color-1) 0%, 
@@ -543,7 +550,7 @@ svg[name="DiscordWordmark"] path
 }
 
 /* Server list background colour change */
-.da-wrapper .da-scroller
+.da-wrapper .da-scroller, .scrollerWrap-1IAIlv .scroller-2FKFPG
 {
     background: var(--server-list-background-color);
     border-right: 20px inset var(--server-list-border-right-color);
@@ -552,14 +559,16 @@ svg[name="DiscordWordmark"] path
 }
 
 /* Font change to microsoft sans serif (Like MSN) */
-.markupRtl-3M0hmN, .da-name, .da-textArea
+.da-name, .da-textArea, 
+.markupRtl-3M0hmN, .name-3YKhmS, .name-3_Dsmg, .title-29uC1r, .username-_4ZSMR, .roleColor-rz2vM0, 
+.barButtonBase-3UKlW2, .channelTextArea-rNsIhG, .text-1y-e8-, .username-2b1r56
 {
     font-family: MicrosoftSansSerif;
     text-shadow: var(--text-shadow-color);
 }
 
 /* New messages button background change */
-.da-newMessagesBar
+.da-newMessagesBar, .newMessagesBar-mujexs
 {
     border-radius: 0 !important;
     border: solid 1px var(--grey-border-1) !important;
@@ -567,7 +576,8 @@ svg[name="DiscordWordmark"] path
 }
 
 /* New messages button text, bottom left username colour change */
-.da-newMessagesBar span, .da-barButtonBase, .da-subtext, .da-grow, .da-title
+.da-newMessagesBar span, .da-barButtonBase, .da-subtext, .da-title, 
+.newMessagesBar-mujexs span, .subtext-3CDbHg, .button-14-BFJ, .title-eS5yk3
 {
     font-family: MicrosoftSansSerif;
     color: var(--text-color-darker);
