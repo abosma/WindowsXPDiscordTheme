@@ -5,7 +5,7 @@ Changes Discord to a Windows XP/MSN Messenger Theme.
 #### How to install the theme
 Here's a good tutorial for installing BD Themes https://codepen.io/Beard-Design/full/mEXNaN
 
-You can download the theme from https://github.com/abosma/WindowsXPDiscordTheme/releases/download/1.0/windowsxp.theme.css
+You can download the theme from https://github.com/abosma/WindowsXPDiscordTheme/releases/download/1.2/windowsxp.theme.css
 
 Currently only works if you have normalized classes enabled, WIP
 
