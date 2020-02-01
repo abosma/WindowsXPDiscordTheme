@@ -91,6 +91,8 @@
     --image-pin-button: url(https://i.imgur.com/lGlOrAs.gif);
     --image-help-button: url(https://i.imgur.com/yaIIa8b.png);
     --image-mention-button: url(https://i.imgur.com/ui2btvn.png);
+
+    --text-shadow-color: 1px 1px black;
 }
 
 .theme-light
@@ -145,6 +147,8 @@
     --image-pin-button: url(https://i.imgur.com/lGlOrAs.gif);
     --image-help-button: url(https://i.imgur.com/yaIIa8b.png);
     --image-mention-button: url(https://i.imgur.com/ui2btvn.png);
+
+    --text-shadow-color: 1px 1px lightgrey;
 }
 
 
@@ -551,7 +555,7 @@ svg[name="DiscordWordmark"] path
 .markupRtl-3M0hmN, .da-name, .da-textArea
 {
     font-family: MicrosoftSansSerif;
-    text-shadow: 1px 1px black;
+    text-shadow: var(--text-shadow-color);
 }
 
 /* New messages button background change */
@@ -567,5 +571,5 @@ svg[name="DiscordWordmark"] path
 {
     font-family: MicrosoftSansSerif;
     color: var(--text-color-darker);
-    text-shadow: 1px 1px black;
+    text-shadow: var(--text-shadow-color);
 }
