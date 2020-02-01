@@ -7,8 +7,6 @@ Here's a good tutorial for installing BD Themes https://codepen.io/Beard-Design/
 
 You can download the theme from https://github.com/abosma/WindowsXPDiscordTheme/releases/download/1.3/windowsxp.theme.css
 
-Currently only works if you have normalized classes enabled, WIP
-
 ### Preview Dark Theme
 ![Dark Theme](https://i.imgur.com/kjAXgre.png)
 
