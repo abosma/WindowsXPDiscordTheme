@@ -10,7 +10,7 @@ You can download the theme from https://github.com/abosma/WindowsXPDiscordTheme/
 Currently only works if you have normalized classes enabled, WIP
 
 ### Preview Dark Theme
-![Dark Theme](https://i.imgur.com/ea8A2lE.png)
+![Dark Theme](https://i.imgur.com/kjAXgre.png)
 
 ### Preview Light Theme
-![Light Theme](https://i.imgur.com/K2lD8C8.png)
+![Light Theme](https://i.imgur.com/NtT214S.png)
